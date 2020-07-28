@@ -1,0 +1,42 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.0.234",
+          "Port": "5001"
+        },
+        {
+          "Host": "192.168.0.234",
+          "Port": "5003"
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceA/{path}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.0.234",
+          "Port": "5002"
+        },
+        {
+          "Host": "192.168.0.234",
+          "Port": "5004"
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceB/{path}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ]
+}

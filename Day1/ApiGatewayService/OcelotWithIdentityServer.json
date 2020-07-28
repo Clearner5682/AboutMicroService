@@ -1,0 +1,47 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.0.232",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/token",
+      "UpstreamHttpMethod": [ "Get","Post" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.0.232",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceA/{path}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Priority": 2,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.0.232",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceB/{path}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Priority": 2
+    }
+  ]
+}

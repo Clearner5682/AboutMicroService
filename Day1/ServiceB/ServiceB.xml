@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceB</name>
+    </assembly>
+    <members>
+        <member name="T:ServiceB.TestController">
+            <summary>
+            测试接口
+            </summary>
+        </member>
+        <member name="M:ServiceB.TestController.Test">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

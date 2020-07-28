@@ -1,0 +1,54 @@
+{
+  "Routes": [],
+  "Aggregates": [],
+  "DynamicRoutes": [
+    {
+      "ServiceName": "ServiceA",
+      "RateLimitRule": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 5,
+        "Limit": 5
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": null,
+    "ServiceDiscoveryProvider": {
+      "Host": "127.0.0.1", // Consul Service IP
+      "Port": 8500, // Consul Service Port
+      "Type": "Consul"
+    },
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false, // Http头  X-Rate-Limit 和 Retry-After 是否禁用
+      "QuotaExceededMessage": "Too many requests, are you OK?", // 当请求过载被截断时返回的消息
+      "HttpStatusCode": 999, // 当请求过载被截断时返回的http status
+      "ClientIdHeader": "client_id" // 用来识别客户端的请求头，默认是 ClientId
+    },
+    "RateLimitRule": {
+      "ClientWhitelist": [],
+      "EnableRateLimiting": false,
+      "Period": "5s",
+      "PeriodTimespan": 5,
+      "Limit": 5
+    },
+    "QoSOptions": {
+      "ExceptionsAllowedBeforeBreaking": 2,
+      "DurationOfBreak": 5000,
+      "TimeoutValue": 2000
+    },
+    "BaseUrl": null,
+    "LoadBalancerOptions": {
+      "Type": "LeastConnection",
+      "Key": null,
+      "Expiry": 0
+    },
+    "DownstreamScheme": "http",
+    "HttpHandlerOptions": {
+      "AllowAutoRedirect": false,
+      "UseCookieContainer": false,
+      "UseTracing": false
+    }
+  }
+}
