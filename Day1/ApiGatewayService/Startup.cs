@@ -50,7 +50,7 @@ namespace ApiGatewayService
             });
 
             // IdentityServer
-            var authenticationKey = "TestKey";
+            var authenticationKey = "TestKey";// 一个Key对应一个授权认证方案，可以多个服务使用同一个Key
             services.AddAuthentication("Bearer")
                     .AddIdentityServerAuthentication(authenticationKey, options =>
                     {

@@ -1,4 +1,6 @@
 {
+  // 使用动态路由，Routes节点必须为空
+  // 转发规则为：{ServiceName}/{path}，转发到对应服务的/{path}路由
   "Routes": [],
   "Aggregates": [],
   "DynamicRoutes": [
