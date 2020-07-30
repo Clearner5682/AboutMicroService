@@ -12,7 +12,9 @@
       "commandName": "Project",
       "applicationUrl": "http://192.168.0.234:5006",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        "SKYWALKING__SERVICENAME": "ServiceB"
       }
     }
   }

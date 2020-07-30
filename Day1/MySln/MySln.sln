@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot.Provider.Consul", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot.Provider.Polly", "..\Ocelot\src\Ocelot.Provider.Polly\Ocelot.Provider.Polly.csproj", "{385FBAA7-0BF1-4919-B04F-678637903533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "..\IdentityService\IdentityService.csproj", "{ECE408F2-98C2-48E1-B493-0ED2EC537776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService", "..\IdentityService\IdentityService.csproj", "{ECE408F2-98C2-48E1-B493-0ED2EC537776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

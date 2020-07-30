@@ -32,5 +32,12 @@ namespace ServiceB
 
             return Ok(new { ServiceName = this.GetType().FullName, Address = this.HttpContext.Request.Host });
         }
+
+        [HttpGet]
+        [Route("Error")]
+        public IActionResult Error()
+        {
+            throw new Exception("ServiceB throw a Error");
+        }
     }
 }

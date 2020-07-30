@@ -15,5 +15,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ServiceA.TestController.Error">
+            <summary>
+            异常测试
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

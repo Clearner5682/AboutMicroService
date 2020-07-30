@@ -10,9 +10,11 @@
   "profiles": {
     "ServiceA": {
       "commandName": "Project",
-      "applicationUrl": "http://192.168.0.234:5001",
+      "applicationUrl": "http://192.168.0.232:5001",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        "SKYWALKING__SERVICENAME": "ServiceA"
       }
     }
   }
